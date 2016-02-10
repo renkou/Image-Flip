@@ -1,0 +1,77 @@
+*,*:before,*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 100%;
+	font-size: 0;
+}
+
+.instance {
+	width: 49%;
+	float: left;
+	text-align: center;
+	position: relative;
+	border: 2px solid black;
+	margin: 5px;
+	font-size: medium;
+}
+
+.earth {
+	width: 60%;
+	/*z-index: -1;*/
+}
+
+.rotate {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.rotate + .earth {
+	transition: all 2s ease;
+}
+
+.rotate:checked + .earth {
+	transform: rotateY(180deg);
+	transform-style: preserved-3d;
+}
+
+.desc {
+	width: 100%;
+	border-top: 2px solid black;
+}
+
+.sentence {
+	width: 49%;
+	text-align: left;
+	display: inline-block;
+}
+
+.cost {
+	width: 49%;
+	text-align: right;
+	display: inline-block;
+}
+
+.ui {
+	border-top: 2px solid black;
+}
+
+.ui-button {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 0;
+	border-top: 0;
+	background-color: lightblue;
+	width: 24.5%;
+	box-shadow: none;
+}
